@@ -1,10 +1,12 @@
 import './App.css';
-import { Button } from 'antd';
+import { ChakraProvider } from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 function App() {
   return (
     <div className="App">
-      <Button type="primary" className='test'>登录</Button>
+      <ChakraProvider><Button colorScheme='blue'>Button</Button></ChakraProvider>
+    
     </div>
   );
 }
