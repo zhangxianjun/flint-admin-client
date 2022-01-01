@@ -1,11 +1,11 @@
 import './App.css';
-import {Container} from "./controller/Container";
+import {Main} from "./controller/Main";
+
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-light">Tailwind</h1>
-        <Container></Container>
+      <Main></Main>
     </div>
   );
 }
