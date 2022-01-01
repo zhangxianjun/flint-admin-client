@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useMemo }from 'react';
 import {Layout, Nav, Button, Breadcrumb, Skeleton, Avatar} from '@douyinfe/semi-ui';
 import {
     IconBell,
     IconHelpCircle,
-    IconHome,
-    IconHistogram,
-    IconLive,
+    IconUser,
+    IconStar,
+    IconUserGroup,
     IconSetting,
     IconSemiLogo
 } from '@douyinfe/semi-icons';
 
 const {Header, Sider, Content} = Layout;
+
+// const items = useMemo(() => [
+//     { itemKey: 'user', text: '用户管理', icon: <IconUser /> },
+//     { itemKey: 'union', text: '公会中心', icon: <IconStar /> },
+//     {
+//         itemKey: 'union-management',
+//         text: '公会管理',
+//         icon: <IconUserGroup />,
+//         items: ['公告设置', '公会查询', '信息录入']
+//     },
+//     {
+//         text: '任务平台',
+//         icon: <IconSetting />,
+//         itemKey: 'job',
+//         items: ['任务管理', '用户任务查询'],
+//     },
+// ], []);
+
 
 export class Main extends React.Component {
 
@@ -70,10 +88,30 @@ export class Main extends React.Component {
                             style={{maxWidth: 220, height: '100%'}}
                             defaultSelectedKeys={['Home']}
                             items={[
-                                {itemKey: 'Home', text: '首页', icon: <IconHome size="large"/>},
-                                {itemKey: 'Histogram', text: '基础数据', icon: <IconHistogram size="large"/>},
-                                {itemKey: 'Live', text: '测试功能', icon: <IconLive size="large"/>},
-                                {itemKey: 'Setting', text: '设置', icon: <IconSetting size="large"/>},
+                                {
+                                    itemKey: 'home', text: '首页', icon: <IconUser />,
+                                    items: ['今日待办']
+                                },
+                                {
+                                    itemKey: 'product', text: '产品', icon: <IconStar />,
+                                    items: ['产品原型', '标注切图', '原型反馈']
+                                },
+                                {
+                                    itemKey: 'dev', text: '开发', icon: <IconStar />,
+                                    items: ['开发计划', '流程设计', '接口文档', '部署文档', '源码管理']
+                                },
+                                {
+                                    itemKey: 'test', text: '测试', icon: <IconStar />,
+                                    items: ['测试用例', 'BUG系统']
+                                },
+                                {
+                                    itemKey: 'pro', text: '生产', icon: <IconStar />,
+                                    items: ['服务架构', '账号系统', '脚本管理', '终端系统', '主机监控', '部署文档']
+                                },
+                                {
+                                    itemKey: 'sys', text: '系统', icon: <IconStar />,
+                                    items: ['用户管理', '权限管理', '外链列表']
+                                },
                             ]}
                             footer={{
                                 collapseButton: true,
