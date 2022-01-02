@@ -1,3 +1,18 @@
-// export async function queryCurrent() {
-//     return request("/api/v1/user/info", { method: "POST" });
-// }
+import axios from "axios"
+
+const baseUrl = "/api";
+
+export class HttpUtil {
+
+    static post() {
+        axios.get(baseUrl).then(
+            response => {
+                console.log("=====" + response);
+            },
+            error => {
+                console.log("===" + error);
+            }
+        );
+    }
+}
+

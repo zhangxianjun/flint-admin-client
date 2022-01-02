@@ -1,19 +1,25 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { Col, Row, Typography, Form, Toast, Button } from '@douyinfe/semi-ui';
+import { HttpUtil } from '../../service/HttpUtil';
+
 
 const { Title } = Typography;
 
 const handleSubmit = (values) => {
     // 跳转到主页面
+    let localStorage = window.localStorage;
+    localStorage.isLogin = '1';
+    HttpUtil.post();
+    
 };
 
-export class Login extends React.Component {
+export class Login extends PureComponent {
 
     componentDidMount() {
         console.log("componentDidMount");
-        let localStorage = window.localStorage
-        // if (localStorage.islogin === '1') {
-        //     this.props .replace('/main')
+        // let localStorage = window.localStorage
+        // if (localStorage.isLogin === '1') {
+        //     this.props.history.replace('/main');
         // }
     }
 
@@ -37,7 +43,6 @@ export class Login extends React.Component {
                                 )}
                             </Form>
                         </div>
-
                     </Col>
                 </Row>
             </div>

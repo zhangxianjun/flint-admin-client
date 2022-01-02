@@ -8,7 +8,6 @@ function App() {
     return (
         <div className="App">
             <Routes>
-
                 <Route path="/login" element={<Login />} />
                 <Route path="/main" element={<Main />} />
                 <Route path="/" element={<Navigate to="/login" />} />
