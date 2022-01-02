@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Col, Row, Typography, Form, Toast, Button } from '@douyinfe/semi-ui';
-import { HttpUtil } from '../../service/HttpUtil';
+// import { HttpUtil } from '../../service/HttpUtil';
 import { useNavigate as navigate } from 'react-router-dom';
 
 
@@ -19,7 +19,7 @@ const handleSubmit = (values) => {
     
 };
 
-export class Login extends PureComponent {
+export class Todo extends PureComponent {
 
     componentDidMount() {
         console.log("componentDidMount");

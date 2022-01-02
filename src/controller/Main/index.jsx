@@ -9,6 +9,7 @@ import {
     IconSetting,
     IconSemiLogo
 } from '@douyinfe/semi-icons';
+import { Outlet } from 'react-router-dom';
 
 const {Header, Sider, Content} = Layout;
 
@@ -138,10 +139,7 @@ export class Main extends React.Component {
                                 padding: '32px',
                             }}
                         >
-                            <Skeleton placeholder={<Skeleton.Paragraph rows={2}/>} loading={true}>
-                                <p>Hi, Bytedance dance dance.</p>
-                                <p>Hi, Bytedance dance dance.</p>
-                            </Skeleton>
+                            <Outlet></Outlet>
                         </div>
                     </Content>
                 </Layout>
